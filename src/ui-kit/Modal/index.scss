@@ -1,0 +1,6 @@
+.modal-body {
+    &__scrollable {
+        max-height: 100vh;
+        overflow: auto;
+    }
+}

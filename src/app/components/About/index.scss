@@ -1,0 +1,89 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/dashboard/dashboard-basics';
+@import '../../../assets/styles/dashboard/dashboard-gui-elements';
+@import '../../../assets/styles/layout/offsets';
+
+.dashboard-content-container {
+    background-color: #fafafa;
+}
+
+.dashboard-content-inner {
+    background-color: #fafafa;
+}
+
+.dashboard-headline {
+    padding-top: 50px;
+    background-color: #fafafa;
+}
+
+.dashboard-box {
+    &.about-mission {
+        display: flex;
+        background-repeat: no-repeat;
+        min-height: 384px;
+        background-position: right center;
+        padding: 0;
+
+        & .mission-caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 24px;
+            text-align: center;
+            width: 400px;
+
+            & .underline {
+                background-image: url('/assets/images/about/underline.svg');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                padding-bottom: 4px;
+            }
+        }
+
+        & .img {
+            flex: 1;
+            background-image: url('/assets/images/about/mission.svg');
+            background-repeat: no-repeat;
+            background-position: center left;
+        }
+    }
+
+    &.about-value {
+        display: flex;
+        background-repeat: no-repeat;
+        min-height: 384px;
+        background-position: right center;
+        padding: 0;
+
+        & .value-caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 24px 0 24px 24px;
+            text-align: center;
+            flex: 1;
+
+            @media screen and (max-width: 960px) {
+                padding: 24px;
+            }
+
+            & .underline {
+                background-image: url('/assets/images/about/underline.svg');
+                background-repeat: no-repeat;
+                background-position: center bottom;
+                padding-bottom: 4px;
+            }
+        }
+
+        & .img {
+            flex: 1;
+            background-image: url('/assets/images/about/panel-bg.svg');
+            background-repeat: no-repeat;
+            background-position: center left;
+
+            @media screen and (max-width: 960px) {
+                display: none;
+            }
+        }
+    }
+}

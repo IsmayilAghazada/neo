@@ -1,0 +1,43 @@
+.phone {
+    &-input,
+    &-search > &-search-box {
+        height: 48px !important;
+        outline: none !important;
+        font-size: 16px !important;
+        color: #808080 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        background-color: #fff !important;
+        font-weight: 500 !important;
+        border-radius: 4px !important;
+        border: none !important;
+        box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.12);
+
+        &:hover,
+        &:focus {
+            border: none !important;
+        }
+
+        &:focus {
+            box-shadow: 0 0 1px 1px #7b87e2 !important;
+        }
+    }
+
+    &-search {
+        padding: 8px !important;
+
+        &-box {
+            margin: 0 !important;
+        }
+    }
+
+    &-container {
+        & > .flag-dropdown.open {
+            width: 100% !important;
+        }
+    }
+
+    &-dropdown {
+        width: 100% !important;
+    }
+}

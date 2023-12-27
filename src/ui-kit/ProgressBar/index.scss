@@ -1,0 +1,25 @@
+.svg {
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+
+    &-circle {
+        fill: none;
+        transform: rotate(-90deg);
+        transform-origin: center;
+        // transition: stroke-dashoffset 2s linear;
+
+        &--bg {
+            fill: none;
+        }
+
+        &__text {
+            font-size: 24;
+            // font-family: $font-family-base;
+            text-anchor: middle;
+            fill: #fff;
+        }
+    }
+}

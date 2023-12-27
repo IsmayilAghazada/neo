@@ -1,0 +1,177 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/listings/full-page-layout';
+@import '../../../assets/styles/listings/jobs-list-layout';
+@import '../../../assets/styles/listings/jobs-grid-layout';
+@import '../../../assets/styles/icons/material-icons';
+
+.pagination {
+    justify-content: center;
+    display: flex;
+}
+
+.simplebar-content {
+    min-height: calc(100vh - 64px);
+    padding-bottom: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job-listing .job-listing-footer ul li {
+    min-width: 34%;
+}
+
+/* Bookmark Button */
+
+span.bookmark-icon {
+    font-size: 20px;
+    position: absolute;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    background-color: #eee;
+    color: #c0c0c0;
+    display: block;
+    height: 39px;
+    width: 39px;
+    border-radius: 50%;
+    transition: all 0.4s;
+    line-height: $body-line-height;
+}
+
+.bookmark-icon {
+    &.bookmarked {
+        animation: bookmarked-shadow 0.3s;
+        background-color: #feb342;
+        color: #fff;
+
+        &::before {
+            animation: bookmark-icon 0.5s;
+        }
+    }
+
+    &::before {
+        transition: transform 0.4s cubic-bezier(0.8, -0.41, 0.19, 2.5);
+        font-family: 'Material-Icons', sans-serif;
+        position: absolute;
+        right: 0;
+        left: 0;
+        text-align: center;
+        top: 6px;
+        content: '\e988';
+    }
+
+    &:not(.bookmarked):hover {
+        background-color: #333;
+        color: #fff;
+    }
+}
+
+@keyframes bookmarked-shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba(254, 179, 66, 0.8);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes bookmark-icon {
+    0% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* Bookmark Button */
+
+.bookmark-button {
+    background-color: #404040;
+    display: inline-block;
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    color: #fff;
+    padding: 0 15px 0 15px;
+    padding-left: 59px;
+    border-radius: $global-border-radius;
+    transition: 0.4s;
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+
+    .bookmark-icon,
+    &:hover .bookmark-icon {
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .bookmark-icon {
+        // border-radius: $global-border-radius;
+        position: absolute;
+        left: 0;
+        right: auto;
+        top: auto;
+        height: 44px;
+        width: 44px;
+        border-radius: $global-border-radius 0 0 $global-border-radius;
+        pointer-events: none;
+        transition: 0.4s;
+        animation: none;
+
+        &::before {
+            top: 8px;
+            color: #fff;
+            transition: 0.4s;
+            font-size: 18px;
+        }
+    }
+
+    &.bookmarked {
+        background-color: #feb342;
+        color: #fff;
+        box-shadow: 0 3px 12px rgba(254, 179, 66, 0.2);
+
+        .bookmark-icon::before {
+            color: #fff;
+        }
+
+        .bookmark-icon,
+        &:hover .bookmark-icon {
+            background-color: rgba(255, 255, 255, 0.16);
+        }
+
+        .bookmarked-text {
+            display: block;
+        }
+    }
+
+    &:hover .bookmark-icon::before {
+        color: #fff;
+    }
+
+    .bookmark-text {
+        display: block;
+    }
+
+    &.bookmarked .bookmark-text,
+    .bookmarked-text {
+        display: none;
+    }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}

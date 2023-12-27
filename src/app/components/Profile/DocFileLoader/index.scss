@@ -1,0 +1,109 @@
+@import '../../../../assets/styles/variables';
+
+.attachments-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: calc(100% + 20px);
+    margin-bottom: -30px;
+}
+
+a.attachment-box {
+    cursor: pointer;
+}
+
+a.attachment-box:hover {
+    background-color: $primary-color;
+    color: #fff;
+
+    &::before {
+        border-color: rgba(0, 0, 0, 0.25) #fff;
+    }
+}
+
+a.attachment-box:hover i {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Remove Attachment Button */
+
+.attachment-box {
+    position: relative;
+    display: flex;
+    background-color: #f4f4f4;
+    border-radius: 4px 0 4px 4px;
+    font-weight: 600;
+    padding: 15px 20px;
+    padding-bottom: 45px;
+    padding-right: 25px;
+    line-height: 24px;
+    flex-direction: column;
+    color: $body-font-color;
+    transition: 0.3s;
+    flex: 1;
+    cursor: default;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-width: 0 20px 20px 0;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.15) #fff;
+        transition: 0.3s;
+        border-radius: 0 0 0 4px;
+    }
+
+    span {
+        font-size: 14px;
+        line-height: 20px;
+        display: inline-block;
+        flex: auto;
+    }
+
+    i {
+        display: block;
+        font-style: normal;
+        font-size: 14px;
+        color: #999;
+        font-weight: 500;
+        margin-top: 10px;
+        position: absolute;
+        bottom: 10px;
+        transition: 0.3s;
+    }
+
+    .remove-attachment {
+        position: absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        bottom: 10px;
+        right: 10px;
+        color: #f50257;
+        background-color: transparent;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        transition: 0.3s;
+        opacity: 0;
+        transform: translateY(3px);
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(234, 65, 81, 0.15);
+            box-shadow: 0 3px 8px rgba(234, 65, 81, 0.15);
+        }
+    }
+
+    &:hover {
+        background-color: rgba(42, 65, 232, 0.12);
+        color: #2a41eb;
+    }
+
+    &:hover .remove-attachment {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,55 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/dashboard/dashboard-basics';
+@import '../../../assets/styles/dashboard/dashboard-gui-elements';
+@import '../../../assets/styles/layout/offsets';
+@import '../../../assets/styles/icons/feather-icons';
+
+.dashboard-content-container {
+    background-color: #fafafa;
+}
+
+.job-listing-details-manage {
+    flex-direction: column !important;
+    align-items: baseline !important;
+}
+
+.dashboard-content-inner {
+    background-color: #fafafa;
+}
+
+.dashboard-headline {
+    padding-top: 50px;
+    background-color: #fafafa;
+}
+
+.flex {
+    display: flex;
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--space-between {
+        justify-content: space-between;
+    }
+
+    &-algined--center {
+        align-items: center;
+    }
+
+    &-algined--start {
+        align-items: flex-start;
+    }
+
+    &-row {
+        flex-direction: row;
+    }
+}
+
+.buttons-to-right > * {
+    margin-right: 16px !important;
+}

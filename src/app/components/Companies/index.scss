@@ -1,0 +1,26 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/listings/companies-list';
+@import '../../../assets/styles/icons/material-icons';
+@import '../../../assets/styles/layout/offsets';
+
+.pagination {
+    justify-content: center;
+    display: flex;
+}
+
+.simplebar-content {
+    padding-bottom: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.company {
+    text-decoration: none !important;
+
+    & p {
+        color: #333;
+    }
+}

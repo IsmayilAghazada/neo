@@ -1,0 +1,45 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/dashboard/dashboard-basics';
+@import '../../../assets/styles/dashboard/dashboard-gui-elements';
+@import '../../../assets/styles/layout/offsets';
+
+.dashboard-content-container {
+    background-color: #fafafa;
+}
+
+.dashboard-content-inner {
+    background-color: #fafafa;
+}
+
+.dashboard-headline {
+    padding-top: 50px;
+    background-color: #fafafa;
+}
+
+.flex {
+    display: flex;
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &--center {
+        justify-content: center;
+    }
+
+    &--space-between {
+        justify-content: space-between;
+    }
+
+    &-algined--center {
+        align-items: center;
+    }
+
+    &-algined--start {
+        align-items: flex-start;
+    }
+
+    &-row {
+        flex-direction: row;
+    }
+}

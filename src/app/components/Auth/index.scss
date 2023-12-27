@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/dashboard/dashboard-gui-elements';
+
+.line-separate {
+    position: relative;
+    color: #b5b7b6;
+    text-align: center;
+    margin: 15px 0;
+
+    &::before {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 100%;
+        content: '';
+        border-top: 1px solid #e2e3e2;
+    }
+
+    &__inner {
+        font-weight: 700;
+        position: relative;
+        display: inline-block;
+        padding: 4px 16px;
+        background: #fff;
+    }
+}
+
+.social-auth {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 960px) {
+        flex-direction: column;
+    }
+}
+
+.social__bottom {
+    background: #fff;
+    bottom: 0;
+    padding: 0 35px;
+}

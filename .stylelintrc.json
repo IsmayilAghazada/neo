@@ -1,0 +1,15 @@
+{
+    "extends": ["stylelint-config-standard"],
+    "rules": {
+        "indentation": 4,
+        "unit-whitelist": ["px", "vh", "%", "deg", "s", "ms", "em", "rem"],
+        "at-rule-no-unknown": [
+            true,
+            {
+                "ignoreAtRules": ["at-root", "include", "mixin"]
+            }
+        ],
+        "no-descending-specificity": null
+    },
+    "ignoreFiles": ["**/*.tsx"]
+}

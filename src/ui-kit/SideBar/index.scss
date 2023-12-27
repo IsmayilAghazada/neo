@@ -1,0 +1,9 @@
+.simplebar-content {
+    min-height: calc(100vh - 64px);
+    padding-bottom: 0;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
