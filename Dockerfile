@@ -9,7 +9,7 @@ RUN npm run build
 # stage 2: 
 FROM registry.access.redhat.com/ubi8/nginx-120
 WORKDIR /usr/app
-COPY --from=builder ./nginx.conf /etc/nginx
+COPY --from=builder /usr/app/nginx.conf /etc/nginx
 COPY --from=builder /usr/app/build/ /usr/share/nginx/html
 USER nginx
 EXPOSE 3000
