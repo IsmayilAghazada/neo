@@ -17,7 +17,7 @@ export class HttpClient implements IHttpClient {
     public onRequestTimeout: Event = new Event();
 
     private static readonly DEFAULT_CONFIG: IRequestConfig = {
-        baseURL: `/v1/`,
+        baseURL: `https://neo-814m.onrender.com/v1/`,
         timeout: 30000,
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
     };
