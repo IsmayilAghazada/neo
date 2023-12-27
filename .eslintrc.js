@@ -6,7 +6,7 @@ module.exports = {
         'import/prefer-default-export': 0,
         'class-methods-use-this': 0,
         'import/no-extraneous-dependencies': 0,
-        "react/destructuring-assignment": 0,
+        'react/destructuring-assignment': 0,
         'react/jsx-props-no-spreading': 0,
         'react/no-array-index-key': 0,
         '@typescript-eslint/no-explicit-any': 0,
@@ -17,6 +17,7 @@ module.exports = {
         'react/require-default-props': [1, { forbidDefaultForRequired: true, ignoreFunctionalComponents: true }],
         'import/no-absolute-path': 'off',
         'react-hooks/exhaustive-deps': 0,
+        'jsx-a11y/control-has-associated-label': 'off',
     },
     settings: {
         'import/resolver': {

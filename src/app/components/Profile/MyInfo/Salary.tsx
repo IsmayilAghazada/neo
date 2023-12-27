@@ -12,7 +12,7 @@ interface IProps {
     step?: number;
 }
 
-export const Salary: React.FC<IProps> = ({ value, onChange, min, max }) => {
+export const Salary: React.FC<IProps> = ({ value, onChange, min, max, step }) => {
     const { t } = useTranslation(['Common']);
     const minValue = (value as number[])[0];
     const maxValue = (value as number[])[(value as number[]).length - 1];
@@ -79,6 +79,7 @@ export const Salary: React.FC<IProps> = ({ value, onChange, min, max }) => {
                         onChange={(_: any, newValue: number[]) => {
                             onChange(newValue);
                         }}
+                        step={step}
                         max={max}
                         min={min}
                         valueLabelDisplay="off"
